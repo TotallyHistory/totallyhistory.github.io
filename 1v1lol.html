@@ -133,7 +133,15 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script>
+jQuery(document).ready(function( $ ){
+   $('iframe').on('load', function() {
+      setTimeout(function () {
+         jQuery("#game").css("display","block");
+      }, 5000); // 2 seconds
+   },)
+});
+</script>
 </body>
 
 </html>
