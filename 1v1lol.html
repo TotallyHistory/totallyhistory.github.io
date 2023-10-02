@@ -130,14 +130,26 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-jQuery(document).ready(function( $ ){
-   $('iframe').on('load', function() {
-      setTimeout(function () {
-         jQuery("#game").css("display","block");
-      }, 5000); // 2 seconds
-   },)
-});
+    <script>	window.addEventListener('keydown', function (e) {
+            if(e.key == "`")
+            {
+				window.open('https://classroom.google.com/u/0/h', '_blank');
+            }
+		}, true);
+    function search_game() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('games');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
 </script>
 </body>
 
